@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import About from './components/about.jsx'
 import Contact from './components/contact.jsx'
 import './App.css'
-import { Link, Routes, Route } from 'react-router-dom'
+import { Link, Routes, Route, NavLink, Outlet } from 'react-router-dom'
 
 function Home() {
   return (
@@ -14,21 +14,27 @@ function Home() {
   )
 }
 function App() {
- 
+  const styling = ({ isActive }) => isActive ? 'text-yellow-300 underline' : 'text-white'
 
   return (
     <> 
       <header className='flex justify-between px-10 py-10 bg-red-800'>
         <h1 className='text-3xl text-white italic font-medium'>My App</h1>
         <nav className='flex gap-10 text-lg text-white font-bold'>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <NavLink to="/" className={styling}>
+            Home
+          </NavLink>
+          <NavLink to="/about" className={styling}>
+            About
+          </NavLink>
+          <NavLink to="/contact" className={styling}>
+            Contact
+          </NavLink>
         </nav>
       </header>
-
+      <Outlet/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
