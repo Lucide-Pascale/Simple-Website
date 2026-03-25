@@ -15,7 +15,7 @@ function Home() {
   )
 }
 function App() {
-  const styling = ({ isActive }) => isActive ? 'text-yellow-300 underline' : 'text-white'
+  const styling = ({ isActive }) => isActive ? 'text-yellow-300 underline underline-offset-8' : 'text-white'
 
   return (
     <> 
