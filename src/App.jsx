@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import About from './components/about.jsx'
 import Contact from './components/contact.jsx'
+import {Story, Team, Values} from './components/about.jsx'
 import './App.css'
 import { Link, Routes, Route, NavLink, Outlet } from 'react-router-dom'
 
@@ -24,10 +25,10 @@ function App() {
           <NavLink to="/" className={styling}>
             Home
           </NavLink>
-          <NavLink to="/about" className={styling}>
+          <NavLink to="about" className={styling}>
             About
           </NavLink>
-          <NavLink to="/contact" className={styling}>
+          <NavLink to="contact" className={styling}>
             Contact
           </NavLink>
         </nav>
@@ -35,8 +36,16 @@ function App() {
       <Outlet/>
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+
+        <Route path="about" element={<About />} >
+          <Route index element={<Story />} />
+          <Route index path="story" element={<Story />} />
+          <Route path="team" element={<Team />} />
+          <Route path="values" element={<Values />} />
+        </Route>
+
+        <Route path="contact" element={<Contact />} />
+
       </Routes>
     </>
   )
