@@ -17,6 +17,7 @@ function Home() {
     <Component1 />
     <Counter/>
     <ControlledInput/>
+   
     </div>
   )
 }
