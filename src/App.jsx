@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import About from './components/about.jsx'
 import Contact from './components/contact.jsx'
 import {Story, Team, Values} from './components/about.jsx'
+import Component1 from './components/hooks.jsx'
+import Counter from './components/counter.jsx'
 import './App.css'
 import { Link, Routes, Route, NavLink, Outlet } from 'react-router-dom'
 
@@ -11,6 +13,8 @@ function Home() {
     <div className='p-10'>
       <h1 className='text-3xl font-bold mb-5'>Welcome to My App</h1>
       <p className='text-lg text-gray-700'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo. Sed at felis a enim efficitur bibendum. Curabitur ac ligula id odio efficitur tincidunt. Nulla facilisi. Donec ut velit a nisl convallis fermentum. Proin in nunc sed metus efficitur bibendum.</p>
+    <Component1 />
+    <Counter/>
     </div>
   )
 }

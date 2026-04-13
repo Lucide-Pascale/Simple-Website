@@ -27,7 +27,7 @@ function Values() {
 
 
 function About() {
-  const styling = ({ isActive }) => isActive ? 'underline decoration-yellow-300 decoration-4 underline-offset-4' : ''
+  const styling = ({ isActive }) => isActive ? 'underline decoration-yellow-300 decoration-4 underline-offset-8' : ''
   return (
     <>
     <div className='p-10'>
