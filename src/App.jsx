@@ -5,6 +5,7 @@ import Contact from './components/contact.jsx'
 import {Story, Team, Values} from './components/about.jsx'
 import Component1 from './components/hooks.jsx'
 import Counter from './components/counter.jsx'
+import ControlledInput from './components/controlledInput.jsx'
 import './App.css'
 import { Link, Routes, Route, NavLink, Outlet } from 'react-router-dom'
 
@@ -15,6 +16,7 @@ function Home() {
       <p className='text-lg text-gray-700'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo. Sed at felis a enim efficitur bibendum. Curabitur ac ligula id odio efficitur tincidunt. Nulla facilisi. Donec ut velit a nisl convallis fermentum. Proin in nunc sed metus efficitur bibendum.</p>
     <Component1 />
     <Counter/>
+    <ControlledInput/>
     </div>
   )
 }
